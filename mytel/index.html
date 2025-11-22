@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <!-- Логотип слева -->
+                <a href="index.html" class="logo">
+                    <img src="./source/logo.png" alt="Логотип компании" class="logo__img">
+                </a>
+
+                <!-- Навигация справа -->
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Partners</a></li>
+                        <li class="nav__item"><a href="contactus.html" class="nav__link">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Бургер-меню для мобилок -->
+                <button class="burger" aria-label="Открыть меню">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero-home">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Connecting the World, Intelligently</h1>
+                    <p class="hero__subtitle">Premium global VolP and messaging solutions reliable, secure, and
+                        human-centered.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <div class="about__inner">
+                    <!-- Контент слева -->
+                    <div class="about__content">
+                        <h2 class="about__title">About MyTel</h2>
+                        <p class="about__text">
+                            MYTEL Is A New-Generation, Global Telecom Leader
+                            Specializing In Premium Global VoIP And A2P Messaging
+                            Origination And Termination. We Combine European
+                            Standards, Cutting-Edge Technology, And Human-Centered
+                            Values To Deliver Carrier-Grade, Secure, And Transparent
+                            Communication Solutions. With A Focus On Innovation And
+                            Strategic Vision, We Provide Seamless, Intelligent
+                            Connectivity That Empowers People, Businesses, And Ideas
+                            Worldwide.
+                        </p>
+                        <button class="about__btn about__btn--desktop"
+                            onclick="window.location.replace('about.html')">Find Out More</button>
+                    </div>
+
+                    <!-- Картинка справа -->
+                    <div class="about__image">
+                        <img alt="about__img" src="./source/bg-about.png" class="about__img">
+                    </div>
+
+                    <!-- Кнопка для мобилок -->
+                    <button class="about__btn about__btn--mobile" onclick="window.location.replace('about.html')">Find Out More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="features__inner">
+                    <!-- Айтем 1 -->
+                    <div class="feature__item">
+                        <div class="feature__header">
+                            <div class="feature__icon">
+                                <img src="./source/mission-icon.svg" alt="mission" class="feature__icon-img">
+                            </div>
+                            <h3 class="feature__title">Our Mission</h3>
+                        </div>
+                        <div class="feature__description">
+                            <p>Redefining telecom through trust, innovation, and technology that connects people and
+                                ideas</p>
+                        </div>
+                    </div>
+
+                    <!-- Айтем 2 -->
+                    <div class="feature__item">
+                        <div class="feature__header">
+                            <div class="feature__icon">
+                                <img src="./source/vision-icon.svg" alt="vision" class="feature__icon-img">
+                            </div>
+                            <h3 class="feature__title">Our Vision</h3>
+                        </div>
+                        <div class="feature__description">
+                            <p>To lead globally by uniting technology and innovation under the MYTEL brand.</p>
+                        </div>
+                    </div>
+
+                    <!-- Айтем 3 -->
+                    <div class="feature__item">
+                        <div class="feature__header">
+                            <div class="feature__icon">
+                                <img src="./source/values-icon.svg" alt="values" class="feature__icon-img">
+                            </div>
+                            <h3 class="feature__title">Our Values</h3>
+                        </div>
+                        <div class="feature__description">
+                            <p>our values drive us to deliver trusted, innovative, and human-centered communication
+                                worldwide.</p>
+                        </div>
+                    </div>
+
+                    <!-- Айтем 4 -->
+                    <div class="feature__item">
+                        <div class="feature__header">
+                            <div class="feature__icon">
+                                <img src="./source/goal-icon.svg" alt="goal" class="feature__icon-img">
+                            </div>
+                            <h3 class="feature__title">Our Goal</h3>
+                        </div>
+                        <div class="feature__description">
+                            <p>To make global communication stable, intelligent, and human-driven</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <!-- Заголовок и описание -->
+                <div class="services__header">
+                    <h2 class="services__title">Why Choose MyTel</h2>
+                    <p class="services__subtitle">Where innovation meets reliability to keep your world connected.</p>
+                </div>
+
+                <!-- Основной блок с картинкой и айтемами -->
+                <div class="services__main">
+                    <!-- Картинка слева -->
+                    <div class="services__image">
+                        <img src="./source/bg-security.png" alt="security" class="services__img">
+                    </div>
+
+                    <!-- Айтемы справа -->
+                    <div class="services__items">
+                        <!-- Айтем 1 -->
+                        <div class="service__item">
+                            <div class="service__header">
+                                <img src="./source/globe-icon.svg" alt="globe" class="service__icon-img">
+                                <h3 class="service__title">Premium Connectivity</h3>
+                            </div>
+                            <div class="service__description">
+                                <p>Crystal-clear global voice and messaging services</p>
+                            </div>
+                        </div>
+
+                        <!-- Айтем 2 -->
+                        <div class="service__item">
+                            <div class="service__header">
+                                <img src="./source/Realiability-icon.svg" alt="Realiability" class="service__icon-img">
+                                <h3 class="service__title">Reliability & Trust</h3>
+                            </div>
+                            <div class="service__description">
+                                <p>Proven uptime, security, and precise routing</p>
+                            </div>
+                        </div>
+
+                        <!-- Айтем 3 -->
+                        <div class="service__item">
+                            <div class="service__header">
+                                <img src="./source/Innovation-icon.svg" alt="Innovation" class="service__icon-img">
+                                <h3 class="service__title">Innovation & Agility</h3>
+                            </div>
+                            <div class="service__description">
+                                <p>AI-driven insights and smart automation</p>
+                            </div>
+                        </div>
+
+                        <!-- Айтем 4 -->
+                        <div class="service__item">
+                            <div class="service__header">
+                                <img src="./source/message-icon.svg" alt="message" class="service__icon-img">
+                                <h3 class="service__title">Human - Centered Partnership</h3>
+                            </div>
+                            <div class="service__description">
+                                <p>Trusted, transparent, and collaborative communication</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <!-- Заголовок и описание -->
+                <div class="services__header">
+                    <h2 class="services__title">Our Services</h2>
+                    <p class="services__subtitle">Global VoIP, A2P Messaging & eSIM Travel Connectivity. MYTEL ensures
+                        carrier-grade performance with advanced routing, uptime optimization, and anti-fraud protection,
+                        delivering reliable, premium communication worldwide with A-Z voice termination and direct
+                        routes.</p>
+                </div>
+                <!-- Блок с 3 карточками -->
+                <div class="services__cards">
+                    <!-- Карточка 1 -->
+                    <div class="service-card">
+                        <div class="service-card__bg" style="background-image: url('./source/bg-card-1.png')"></div>
+                        <div class="service-card__content">
+                            <div class="service-card__header">
+                                <h3 class="service-card__title">VOIP Solutions</h3>
+                                <img src="./source/arrow-icon.svg" alt="VoIP">
+                            </div>
+                            <div class="service-card__description">
+                                <p>Our analytics tools provide deep insights into audience behavior and engagement,
+                                    helping you make informed strategic decisions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 2 -->
+                    <div class="service-card">
+                        <div class="service-card__bg" style="background-image: url('./source/bg-card-2.png')">
+                        </div>
+                        <div class="service-card__content">
+                            <div class="service-card__header">
+                                <h3 class="service-card__title">SMS Solutions</h3>
+                                <img src="./source/arrow-icon.svg" alt="Messaging">
+                            </div>
+                            <div class="service-card__description">
+                                <p>Use SMS for real-time communication, customer engagement, and secure transactions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 3 -->
+                    <div class="service-card">
+                        <div class="service-card__bg" style="background-image: url('./source/bg-card-3.png')"></div>
+                        <div class="service-card__content">
+                            <div class="service-card__header">
+                                <h3 class="service-card__title">Travel ESIMs Solutions</h3>
+                                <img src="./source/arrow-icon.svg" alt="eSIM">
+                            </div>
+                            <div class="service-card__description">
+                                <p>Stay connected worldwide with MYTEL Travel eSIMs—affordable internet without roaming
+                                    fees or SIM swaps</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <div class="contact__form-wrapper">
+                    <!-- Заголовок и подзаголовок -->
+                    <div class="contact__header">
+                        <h2 class="contact__title">Get In Touch</h2>
+                        <p class="contact__subtitle">Reach out for inquiries or support</p>
+                    </div>
+
+                    <!-- Форма -->
+                    <form class="contact-form" id="contactForm">
+                        <!-- Блок из 2 инпутов -->
+                        <div class="contact-form__row">
+                            <div class="form-group form-group-p">
+                                <label for="fullname" class="form-label">Full Name</label>
+                                <input type="text" id="fullname" name="fullname" class="form-input"
+                                    placeholder="Enter Your Name" required>
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="Enter Your Email" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                        </div>
+
+                        <!-- Поле Message -->
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-textarea" placeholder="Type Your Message"
+                                rows="5" required></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+
+                        <!-- Чекбокс -->
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="agree" name="agree" class="checkbox__input" required>
+                            <label for="agree" class="checkbox__label">
+                                <span class="checkbox__custom"></span>
+                                I accept the <span style="text-decoration: underline; padding-left: 5px;"> Terms</span>.
+                            </label>
+                            <span class="error-message" id="agreeError"></span>
+                        </div>
+
+                        <!-- Кнопка сабмит -->
+                        <button type="submit" class="contact-form__btn" id="submitBtn">
+                            <span class="btn-text">Submit</span>
+                            <span class="btn-loading" style="display: none;">Sending...</span>
+                        </button>
+
+                        <div class="form-success" id="successMessage" style="display: none;">
+                            ✅ Thank you! Your message has been sent successfully.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <!-- Блок 1: Лого -->
+                <div class="footer__block footer__logo">
+                    <a href="index.html" class="footer-logo">
+                        <img src="./source/logo.png" alt="MyTel Logo" class="footer-logo__img">
+                    </a>
+                </div>
+
+                <!-- Блок 2: Контактная информация -->
+                <div class="footer__block footer__contacts">
+                    <!-- Первая строка - один айтем -->
+                    <div class="contact-row">
+                        <div class="contact-item">
+                            <h4 class="contact-item__title">Address</h4>
+                            <div class="contact-item__content">
+                                <img class="contact-icon" src="./source/placemark-icon.png" alt="placemark"/>
+                                <p class="contact-item__subtitle contact-item__clickable">Ilia & Nino Nakashidze str.1 Tbilisi, Georgia</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вторая строка - три айтема в ряд -->
+                    <div class="contact-row">
+                        <div class="contact-item">
+                            <h4 class="contact-item__title">Phone number</h4>
+                            <div class="contact-item__content">
+                                <img class="contact-icon" src="./source/phone-icon.png" alt="Phone"/>
+                                <p class="contact-item__subtitle contact-item__clickable"
+                                    onclick="window.location.href='tel:+37499528999'">+374 99528999</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <h4 class="contact-item__title">Email</h4>
+                            <div class="contact-item__content">
+                                <img class="contact-icon" src="./source/email-icon.png" alt="Email"/>
+                                <p class="contact-item__subtitle contact-item__clickable"
+                                    onclick="window.location.href='mailto:Info@my-tel.net'">Info@my-tel.net</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <h4 class="contact-item__title">Linkedin</h4>
+                            <div class="contact-item__content">
+                                <img class="contact-icon" src="./source/in-icon.png" alt="Linkedin"/>
+                                <p class="contact-item__subtitle contact-item__clickable"
+                                    onclick="window.open('https://linkedin.com/company/my-tel', '_blank')">
+                                    linkedin.com/company/my-tel</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Блок 3: Ссылки на страницы -->
+                <div class="footer__block footer__links">
+                    <nav class="footer-nav">
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item">
+                                <a href="index.html" class="footer-nav__link">Home</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="about.html" class="footer-nav__link">About</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="services.html" class="footer-nav__link">Services</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="#" class="footer-nav__link">Partners</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="contactus.html" class="footer-nav__link">Contact Us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Копирайт -->
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 MyTel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

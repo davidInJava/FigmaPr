@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <!-- Логотип слева -->
+                <a href="index.html" class="logo">
+                    <img src="./source/logo.png" alt="Логотип компании" class="logo__img">
+                </a>
+
+                <!-- Навигация справа -->
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Partners</a></li>
+                        <li class="nav__item"><a href="contactus.html" class="nav__link">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Бургер-меню для мобилок -->
+                <button class="burger" aria-label="Открыть меню">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="info-contact">
+            <div class="container info__container">
+                <div class="info-contact__inner">
+                    <!-- Левый блок (30%) -->
+                    <div class="info-contact__left">
+                        <h2 class="info-contact__title">Contact Us</h2>
+                        <p class="info-contact__description">
+                            We’re here to connect you. Reach out to discuss partnership opportunities, services, or
+                            career inquiries.
+                        </p>
+
+                        <!-- Блок с информацией -->
+                        <div class="info-contact__details">
+                            <!-- Первый айтем (один) -->
+                            <div class="info-item info-item--single">
+                                <h4 class="info-item__label">Address</h4>
+                                <p class="info-item__value">Ilia & Nino Nakashidze str.1, Tbilisi, Georgia</p>
+                            </div>
+
+                            <!-- Второй блок (два айтема в строку) -->
+                            <div class="info-items-row">
+                                <div class="info-item">
+                                    <h4 class="info-item__label">Phone number</h4>
+                                    <p class="info-item__value">+374 99528999</p>
+                                </div>
+                                <div class="info-item">
+                                    <h4 class="info-item__label">Email</h4>
+                                    <p class="info-item__value">Info@My-Tel.net</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-contact__map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.739178379675!2d44.79943107630157!3d41.68935617125829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044735a3702ca1f%3A0x779ba8505518e5f5!2sIlia%20%26%20Nino%20Nakashidze%20Turn%201%2C%20T'bilisi%2C%20Georgia!5e0!3m2!1sen!2sge!4v1700000000000"
+                                width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen=""
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Правый блок (70%) - форма -->
+                    <div class="info-contact__right">
+                        <div class="contact-form-wrapper">
+                            <div class="contact__header">
+                                <h2 class="contact__title">Get In Touch</h2>
+                                <p class="contact__subtitle">Reach out for inquiries or support</p>
+                            </div>
+                            <!-- Форма (используем твой готовый код) -->
+                            <form class="contact-form" id="contactForm2">
+                                <!-- Блок из 2 инпутов -->
+                                <div class="contact-form__row">
+                                    <div class="form-group form-group-p">
+                                        <label for="fullname2" class="form-label">Full Name</label>
+                                        <input type="text" id="fullname2" name="fullname" class="form-input"
+                                            placeholder="Enter Your Name" required>
+                                        <span class="error-message" id="nameError2"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email2" class="form-label">Email</label>
+                                        <input type="email" id="email2" name="email" class="form-input"
+                                            placeholder="Enter Your Email" required>
+                                        <span class="error-message" id="emailError2"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Поле Message -->
+                                <div class="form-group">
+                                    <label for="message2" class="form-label">Message</label>
+                                    <textarea id="message2" name="message" class="form-textarea"
+                                        placeholder="Type Your Message" rows="5" required></textarea>
+                                    <span class="error-message" id="messageError2"></span>
+                                </div>
+
+                                <!-- Чекбокс -->
+                                <div class="form-checkbox">
+                                    <input type="checkbox" id="agree2" name="agree" class="checkbox__input" required>
+                                    <label for="agree2" class="checkbox__label">
+                                        <span class="checkbox__custom"></span>
+                                        I accept the <span style="text-decoration: underline; padding-left: 5px;">
+                                            Terms</span>.
+                                    </label>
+                                    <span class="error-message" id="agreeError2"></span>
+                                </div>
+
+                                <!-- Кнопка сабмит -->
+                                <button type="submit" class="contact-form__btn" id="submitBtn2">
+                                    <span class="btn-text">Submit</span>
+                                    <span class="btn-loading" style="display: none;">Sending...</span>
+                                </button>
+
+                                <div class="form-success" id="successMessage2" style="display: none;">
+                                    ✅ Thank you! Your message has been sent successfully.
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <!-- Блок 1: Лого -->
+                <div class="footer__block footer__logo">
+                    <a href="index.html" class="footer-logo">
+                        <img src="./source/logo.png" alt="MyTel Logo" class="footer-logo__img">
+                    </a>
+                </div>
+
+                <!-- Блок 2: Контактная информация -->
+                <div class="footer__block footer__contacts">
+                    <!-- Первая строка - один айтем -->
+                    <div class="contact-row">
+                        <div class="contact-item">
+                            <h4 class="contact-item__title">Address</h4>
+                            <div class="contact-item__content">
+                                <img class="contact-icon" src="./source/placemark-icon.png" alt="placemark" />
+                                <p class="contact-item__subtitle contact-item__clickable">Ilia & Nino Nakashidze str.1
+                                    Tbilisi, Georgia</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вторая строка - три айтема в ряд -->
+                    <div class="contact-row">
+                        <div class="contact-item">
+                            <h4 class="contact-item__title">Phone number</h4>
+                            <div class="contact-item__content">
+                                <img class="contact-icon" src="./source/phone-icon.png" alt="Phone" />
+                                <p class="contact-item__subtitle contact-item__clickable"
+                                    onclick="window.location.href='tel:+37499528999'">+374 99528999</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <h4 class="contact-item__title">Email</h4>
+                            <div class="contact-item__content">
+                                <img class="contact-icon" src="./source/email-icon.png" alt="Email" />
+                                <p class="contact-item__subtitle contact-item__clickable"
+                                    onclick="window.location.href='mailto:Info@my-tel.net'">Info@my-tel.net</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <h4 class="contact-item__title">Linkedin</h4>
+                            <div class="contact-item__content">
+                                <img class="contact-icon" src="./source/in-icon.png" alt="Linkedin" />
+                                <p class="contact-item__subtitle contact-item__clickable"
+                                    onclick="window.open('https://linkedin.com/company/my-tel', '_blank')">
+                                    linkedin.com/company/my-tel</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Блок 3: Ссылки на страницы -->
+                <div class="footer__block footer__links">
+                    <nav class="footer-nav">
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item">
+                                <a href="index.html" class="footer-nav__link">Home</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="about.html" class="footer-nav__link">About</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="services.html" class="footer-nav__link">Services</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="#" class="footer-nav__link">Partners</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="contactus.html" class="footer-nav__link">Contact Us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Копирайт -->
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 MyTel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
