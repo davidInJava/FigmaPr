@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Валидация формы
     function validateForm(formData) {
-        console.log(checkbox)
+        //console.log(checkbox)
         let isValid = true;
         clearErrors();
 
@@ -138,66 +138,67 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Отправка формы
-    async function submitForm(formData) {
-        try {
-            // Меняй этот URL на твой Formspree URL
-            const response = await fetch('https://formspree.io/f/mldzkeen', {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json'
-                },
-                body: formData
-            });
+	async function submitForm(formData) {
+	    try {
+		const response = await fetch('/contact-handler.php', { // ← change URL
+		    method: 'POST',
+		    headers: {
+		        'Accept': 'application/json'
+		    },
+		    body: formData
+		});
 
-            if (response.ok) {
-                return true;
-            } else {
-                throw new Error('Network response was not ok');
+		if (response.ok) {
+		    // Optionally read JSON if you want details:
+		    // const data = await response.json();
+		    return true;
+		} else {
+		    console.error('Server error:', response.status);
+		    return false;
+		}
+	    } catch (error) {
+		console.error('Error submitting form:', error);
+		return false;
+	    }
+	}
+
+
+        // Обработчик отправки формы
+        contactForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+
+            if (!validateForm(formData)) {
+                return;
             }
-        } catch (error) {
-            console.error('Error submitting form:', error);
-            return false;
-        }
-    }
 
-    // Обработчик отправки формы
-    contactForm.addEventListener('submit', async function (e) {
-        e.preventDefault();
-        console.log(checkbox)
+            // Показываем loading
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline';
+            submitBtn.disabled = true;
 
-        const formData = new FormData(this);
+            // Отправляем форму
+            const success = await submitForm(formData);  // ← UNCOMMENTED
 
-        if (!validateForm(formData)) {
-            return;
-        }
+            // Скрываем loading
+            btnText.style.display = 'inline';
+            btnLoading.style.display = 'none';
+            submitBtn.disabled = false;
 
-        // Показываем loading
-        btnText.style.display = 'none';
-        btnLoading.style.display = 'inline';
-        submitBtn.disabled = true;
+            if (success) {  // ← REMOVED || 1
+                // Показываем успех
+                successMessage.style.display = 'block';
+                contactForm.reset();
 
-        // Отправляем форму
-        // const success = await submitForm(formData);
-
-        // Скрываем loading
-        btnText.style.display = 'inline';
-        btnLoading.style.display = 'none';
-        submitBtn.disabled = false;
-
-        if (success || 1) {
-            console.log(1)
-            // Показываем успех
-            successMessage.style.display = 'block';
-            contactForm.reset();
-
-            // Скрываем успех через 5 сек
-            setTimeout(() => {
-                successMessage.style.display = 'none';
-            }, 5000);
-        } else {
-            alert('Sorry, there was an error sending your message. Please try again.');
-        }
-    });
+                // Скрываем успех через 5 сек
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+            } else {
+                alert('Sorry, there was an error sending your message. Please try again.');
+            }
+        });
 
     // Реаль-time валидация при вводе
     const inputs = document.querySelectorAll('.form-input, .form-textarea');
@@ -222,8 +223,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     submitBtn.addEventListener('click', function () {
-        console.log("Hello")
-        console.log(checkbox.target.value)
+        //console.log("Hello")
+        //console.log(checkbox.target.value)
     })
 
 
