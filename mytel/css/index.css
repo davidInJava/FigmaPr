@@ -808,7 +808,7 @@ body {
 .form-label {
     display: block;
     font-size: var(--font-16);
-    color: var(--color-white);
+    color: var(--color-white) ;
     margin-bottom: 8px;
 }
 

@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // --- CONFIG ---
-$to = 'mher@ekwest.com';                 // Where to send
+$to = 'daemangasaryan@gmail.com';                 // Where to send
 $subject = 'New message from My-Tel website'; 
 $fromEmail = 'no-reply@my-tel.com';       // Use a real domain-based email if possible
 $fromName  = 'My-Tel Website';
